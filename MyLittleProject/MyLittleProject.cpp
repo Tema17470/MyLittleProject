@@ -66,7 +66,6 @@ int main(array<System::String ^> ^args)
 	int i,n;
 	FILE *in;
 	struct person *students;
-	setlocale(LC_CTYPE,"Russian");
 	Console::CursorVisible::set(false);
 	Console::BufferHeight=Console::WindowHeight;
 	Console::BufferWidth=Console::WindowWidth;
@@ -270,7 +269,7 @@ void alfalist(struct person* student)
 	}
 	getch();
 }
-// Âñòàâêà âêëàä÷èêà â àëôàâèòíûé ñïèñîê
+// Ã‚Ã±Ã²Ã Ã¢ÃªÃ  Ã¢ÃªÃ«Ã Ã¤Ã·Ã¨ÃªÃ  Ã¢ Ã Ã«Ã´Ã Ã¢Ã¨Ã²Ã­Ã»Ã© Ã±Ã¯Ã¨Ã±Ã®Ãª
 void listinsert(struct person* student,char* sname)
 {
 	int i;
@@ -287,7 +286,7 @@ void listinsert(struct person* student,char* sname)
 	if(nt) 
 		nt->pre=nov; 
 	nov->pre=z;// link to previous one
-	for(i=0;i<FileLength;i++) // èä¸ì ïî ñïèñêó 
+	for(i=0;i<FileLength;i++) // Ã¨Ã¤Â¸Ã¬ Ã¯Ã® Ã±Ã¯Ã¨Ã±ÃªÃ³ 
 		if(strcmp(student[i].name,sname)==0)
 		{
 			nov->grade=student[i].grade; 
@@ -311,7 +310,7 @@ void listing(struct person* student)
 	printf("\n\r ===============================================\n\r");
 	for(i=0,nt=student;i<FileLength;nt++,i++) 
 		if (nt->age<9 && strcmp(nt->school,"elementary")==0) 
-			printf("\n\r %-20s %ld",nt->name,nt->age); // âûâîä ïî óñëîâèþ 
+			printf("\n\r %-20s %ld",nt->name,nt->age); // Ã¢Ã»Ã¢Ã®Ã¤ Ã¯Ã® Ã³Ã±Ã«Ã®Ã¢Ã¨Ã¾ 
 	getch(); 
 }
 // Diagramm is made using pseudographics
